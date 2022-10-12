@@ -5,7 +5,6 @@
         <field name="model">payment.acquirer</field>
         <field name="inherit_id" ref="payment.acquirer_form"/>
         <field name="arch" type="xml">
-            <!-- Acquirer configuration page. -->
             <xpath expr='//group[@name="acquirer"]' position="after">
                 <group attrs="{'invisible':[('provider','!=','kuveytturk')]}">
                     <field name="kuveytturk_customer_id"/>
