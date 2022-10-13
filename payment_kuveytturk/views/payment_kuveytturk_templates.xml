@@ -22,6 +22,7 @@
             <input type="hidden" name="status" t-att-value="status" />
             <script src="/payment_kuveytturk/static/src/js/cardjs.js"></script>
             <script type="text/javascript" src="/payment_kuveytturk/static/src/js/kuveytturk.js"></script>
+            <script type="text/javascript" src="/web/static/lib/jquery/jquery.js" /> 
         </template>
     </data>
 </odoo>
