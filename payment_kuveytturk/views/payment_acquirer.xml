@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id ="kuveytturk_payment_form" model="ir.ui.view">
+        <field name="name">kuveytturk.payment.form.view</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.payment_acquirer_form"/>
+        <field name="arch" type="xml">
+            <!-- Acquirer configuration page. -->
+            <xpath expr='//group[@name="acquirer"]' position="after">
+                <group attrs="{'invisible':[('provider','!=','kuveytturk')]}">
+                    <field name="kuveytturk_customer_id"/>
+                    <field name="kuveytturk_merchant_id"/>
+                    <field name="kuveytturk_username"/>
+                    <field name="kuveytturk_password"/>
+                    <field name="kuveytturk_max_installment"/>
+                    <field name="kuveytturk_callback_base_url"/>
+                    <field name="kuveytturk_use_callback_base_url"/>
+                    <field name="kuveytturk_use_samesite_workaround"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

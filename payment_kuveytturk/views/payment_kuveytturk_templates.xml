@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <template id="kuveytturk_form">
+            <input type="hidden" name="post_url" t-att-value="request_url" />
+            <input type="hidden" name="OkUrl" t-att-value="OkUrl" />
+            <input type="hidden" name="FailUrl" t-att-value="FailUrl" />
+            <input type="hidden" name="HashData" t-att-value="HashData" />
+            <input type="hidden" name="MerchantId" t-att-value="MerchantId" />
+            <input type="hidden" name="CustomerId" t-att-value="CustomerId" />
+            <input type="hidden" name="UserName" t-att-value="UserName" />
+            <input type="hidden" name="CardHolderName" t-att-value="CardHolderName" />
+            <input type="hidden" name="CardType" t-att-value="CardType" />
+            <input type="hidden" name="TransactionType" t-att-value="TransactionType" />
+            <input type="hidden" name="InstallmentCount" t-att-value="InstallmentCount" />
+            <input type="hidden" name="Amount" t-att-value="Amount" />
+            <input type="hidden" name="DisplayAmount" t-att-value="DisplayAmount" />
+            <input type="hidden" name="CurrencyCode" t-att-value="CurrencyCode" />
+            <input type="hidden" name="MerchantOrderId" t-att-value="MerchantOrderId" />
+            <input type="hidden" name="TransactionSecurity" t-att-value="TransactionSecurity" />
+            <input type="hidden" name="test_mode" t-att-value="test_mode" />
+            <input type="hidden" name="status" t-att-value="status" />
+            <script src="/payment_kuveytturk/static/src/js/cardjs.js"></script>
+            <script type="text/javascript" src="/payment_kuveytturk/static/src/js/kuveytturk.js"></script>
+        </template>
+    </data>
+</odoo>
