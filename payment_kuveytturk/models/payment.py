@@ -7,7 +7,7 @@ from logging import getLogger
 from werkzeug import urls
 
 from odoo import models, fields, api, _
-# from odoo.addons.payment.controllers.portal import PaymentProcessing
+from odoo.addons.payment.controllers.portal import PaymentPortal
 from odoo.exceptions import ValidationError, UserError
 from odoo.http import request
 from odoo.tools.float_utils import float_compare
@@ -26,7 +26,7 @@ def _add_tx_to_current_session(tx):
     # TODO: Due to cookie default SameSite policy change in 2020, Odoo loses session id, and forgets about the sale.
     #  We remember him the transactions to "watch".
     sale_id = tx.env["sale.order"].search([("name", "=", tx.reference.split("-", 1)[0])]).id
-#     PaymentProcessing.add_payment_transaction(tx)
+    PaymentPortal.add_payment_transaction(tx)
     request.session["__website_sale_last_tx_id"] = tx.id
     request.session["sale_order_id"] = sale_id
     request.session["sale_last_order_id"] = sale_id

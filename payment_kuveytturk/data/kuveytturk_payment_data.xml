@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        
-<!--         <record id="kuveytturk_payment" model="payment.acquirer">
+        <!-- Payment acquirer "config". -->
+        <record id="kuveytturk_payment" model="payment.acquirer">
             <field name="name">kuveytturk Payment Gateway</field>
             <field name="display_as">Credit Card (using KuveytTürk)</field>
             <field name="description">Payment gateway from KuveytTürk to accept online payments from credit cards.</field>
             <field name="image_128" type="base64" file="payment_kuveytturk/static/src/img/kuveytturk.png"/>
             <field name="provider">kuveytturk</field>
             <field name="state">test</field>
-            <field name="view_template_id" ref="kuveytturk_form"/>
+            <field name="redirect_form_view_id" ref="kuveytturk_form"/>
+            <field name="inline_form_view_id" ref="kuveytturk_form"/>
             <field name="company_id" ref="base.main_company"/>
 
-           
+            <!-- Extra parameters needed by this specific acquirer. -->
             <field name="kuveytturk_callback_base_url">https://yoursite.com</field>
-        </record> -->
+        </record>
     </data>
 </odoo>

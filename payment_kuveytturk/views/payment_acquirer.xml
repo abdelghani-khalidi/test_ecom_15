@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--     <record id ="kuveytturk_payment_form" model="ir.ui.view">
+    <record id ="kuveytturk_payment_form" model="ir.ui.view">
         <field name="name">kuveytturk.payment.form.view</field>
         <field name="model">payment.acquirer</field>
         <field name="inherit_id" ref="payment.payment_acquirer_form"/>
         <field name="arch" type="xml">
+            <!-- Acquirer configuration page. -->
             <xpath expr='//group[@name="acquirer"]' position="after">
                 <group attrs="{'invisible':[('provider','!=','kuveytturk')]}">
                     <field name="kuveytturk_customer_id"/>
@@ -18,5 +19,5 @@
                 </group>
             </xpath>
         </field>
-    </record> -->
+    </record>
 </odoo>
