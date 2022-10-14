@@ -14,7 +14,6 @@
     ],
     "assets": {
     "web.assets_backend": ["/payment_kuveytturk/static/src/js/cardjs.js","/payment_kuveytturk/static/src/js/kuveytturk.js"],
-    "web.assets_qweb": ["path to .xml, like /module_name/static/src/...",...],
      },
     "images": ['static/description/banner.png'],
     "application": True,
