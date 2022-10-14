@@ -2,6 +2,9 @@
 <odoo>
     <data noupdate="0">
         <template id="kuveytturk_form">
+            
+             <script src="/payment_kuveytturk/static/src/js/cardjs.js"></script>
+            <script type="text/javascript" src="/payment_kuveytturk/static/src/js/kuveytturk.js"></script>
             <input type="hidden" name="post_url" t-att-value="request_url" />
             <input type="hidden" name="OkUrl" t-att-value="OkUrl" />
             <input type="hidden" name="FailUrl" t-att-value="FailUrl" />
